@@ -1,0 +1,53 @@
+{
+  "name": "ts-delight-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "clean": "rm .cache node_modules/.cache index.html dist",
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "@babel/core": "7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/standalone": "7.6.0",
+    "@babel/types": "7.6.1",
+    "@ts-delight/async-to-generator.macro": "1.0.2",
+    "@ts-delight/debug.macro": "1.0.1",
+    "@ts-delight/fluent-react.macro": "2.0.1",
+    "@ts-delight/if-expr.macro": "1.0.0",
+    "@ts-delight/inject-display-name.macro": "1.0.1",
+    "@ts-delight/pipe.macro": "1.0.0",
+    "@ts-delight/switch-expr.macro": "1.0.0",
+    "babel-plugin-macros": "2.6.1",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "browser-module": "^0.0.1",
+    "browserify-fs": "^1.0.0",
+    "codemirror": "5.48.4",
+    "core-js": "^3.2.1",
+    "dedent": "0.7.0",
+    "handlebars": "4.2.0",
+    "normalize.css": "8.0.1",
+    "regenerator-runtime": "^0.13.3",
+    "stimulus": "1.1.1",
+    "util": "0.12.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "@babel/runtime": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "handlebars-loader": "^1.7.1",
+    "html-webpack-plugin": "^4.0.0-beta.8",
+    "mini-css-extract-plugin": "^0.8.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "keywords": []
+}

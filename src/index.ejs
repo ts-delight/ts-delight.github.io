@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@ts-delight | Playground</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="header">
+        <a
+          id="author-link"
+          href="https://github.com/lorefnon"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          @lorefnon
+        </a>
+        <header id="primary-title">
+          @ts-delight
+        </header>
+      </div>
+      <div id="primary-content">
+        <div id="primary-content-banner">
+          A collection of <b>feather-light</b> &
+          <b>non-intrusive</b> babel-macros to make your JavaScript / TypeScript
+          experience <b>delightful</b>.
+        </div>
+        <div id="primary-cta-container">
+          <a
+            href="https://github.com/ts-delight"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="primary-btn"
+          >
+            Explore on Github
+          </a>
+        </div>
+      </div>
+
+      <div id="playground-container" data-controller="playground tab">
+        <div id="editor-tabber">
+          <div id="editor-title">
+            <a
+              class="clickable"
+              data-action="click->playground#toggleSidebar"
+              style="margin-right: 5px"
+              >☰</a
+            >
+            Try it online!
+          </div>
+          <div class="tabbar">
+            <div
+              class="tab clickable"
+              data-tab-id="babelrc"
+              data-target="tab.tabThumb"
+              data-action="click->tab#switchTab"
+            >
+              .babelrc
+            </div>
+            <div
+              class="tab active clickable"
+              data-tab-id="playground"
+              data-target="tab.tabThumb"
+              data-action="click->tab#switchTab"
+            >
+              Playground
+            </div>
+          </div>
+        </div>
+
+        <div id="playground-row">
+          <div id="editor-sidebar" data-target="playground.sidebar"></div>
+          <pre class="hidden code-block-tab-body" data-target="tab.tabBody" data-tab-id="babelrc">
+	{
+		"plugins": [
+			"babel-plugin-macros"
+		]
+	}
+			</pre
+          >
+
+          <div
+            id="playground"
+            data-target="tab.tabBody"
+            data-tab-id="playground"
+          >
+            <div id="editor-pane" data-target="playground.editorPane">
+              <pre
+                id="editor-pane-static-pre"
+                data-target="playground.injectedImports"
+              ></pre>
+              <div
+                id="editor-pane-dynamic"
+                data-target="playground.editable"
+              ></div>
+            </div>
+            <div id="preview-pane" data-target="playground.editorPreview"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>

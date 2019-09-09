@@ -1,0 +1,13 @@
+<div id="editor-sidebar-header">
+    Select Macros
+</div>
+{{#each macroImports}}
+<label style="display: block" title="{{@key}}">
+    <input 
+        type="checkbox" 
+        value="{{@key}}" 
+        data-action="change->playground#toggleMacro">
+    </input>
+    {{@key}}
+</label>
+{{/each}}
