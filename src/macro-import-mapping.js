@@ -26,7 +26,7 @@ export const macroImports = {
     imported: require("@ts-delight/fluent-react.macro"),
     const: "R",
     example: `
-    const SampleComponent = () => 
+    const ProfileContainer = () => 
       R.div()
         .id("profile-container")
         .className("container")("Hello")
@@ -40,7 +40,7 @@ export const macroImports = {
     const HoC = (name) => () => 
       React.createElement("div", {}, name);
 
-    const SampleComponent = injectDN(HoC("me"));
+    const DynamicComponent = injectDN(HoC("me"));
     `
   },
   "@ts-delight/debug.macro": {

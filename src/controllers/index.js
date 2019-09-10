@@ -1,9 +1,8 @@
 import { Application } from "stimulus";
-import { PlaygroundController } from "./playground-controller";
-import { TabController } from "./tab-controller";
+import { definitionsFromContext } from "stimulus/webpack-helpers"
 
 export const setup = () => {
   const application = Application.start();
-  application.register("playground", PlaygroundController);
-  application.register("tab", TabController);
+  const context = require.context(".", true, /\.js$/)
+  application.load(definitionsFromContext(context))
 };

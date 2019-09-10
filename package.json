@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "clean": "rm .cache node_modules/.cache index.html dist",
+    "clean": "rimraf .cache node_modules/.cache index.html dist",
     "start": "webpack-dev-server",
     "build": "webpack"
   },
@@ -43,6 +43,7 @@
     "handlebars-loader": "^1.7.1",
     "html-webpack-plugin": "^4.0.0-beta.8",
     "mini-css-extract-plugin": "^0.8.0",
+    "rimraf": "^3.0.0",
     "style-loader": "^1.0.0",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.3",

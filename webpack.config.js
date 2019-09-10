@@ -4,6 +4,7 @@ const path = require("path");
 
 module.exports = {
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
+  devtool: 'source-map',
   plugins: [
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output

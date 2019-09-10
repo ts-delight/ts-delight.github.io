@@ -4,7 +4,6 @@
     <title>@ts-delight | Playground</title>
     <meta charset="UTF-8" />
   </head>
-
   <body>
     <div id="app">
       <div id="header">
@@ -71,31 +70,40 @@
 
         <div id="playground-row">
           <div id="editor-sidebar" data-target="playground.sidebar"></div>
-          <pre class="hidden code-block-tab-body" data-target="tab.tabBody" data-tab-id="babelrc">
+          <pre
+            class="hidden code-block-tab-body"
+            data-target="tab.tabBody"
+            data-tab-id="babelrc"
+          >
 	{
 		"plugins": [
 			"babel-plugin-macros"
 		]
 	}
-			</pre
-          >
-
+			    </pre>
           <div
             id="playground"
             data-target="tab.tabBody"
             data-tab-id="playground"
           >
-            <div id="editor-pane" data-target="playground.editorPane">
-              <pre
-                id="editor-pane-static-pre"
-                data-target="playground.injectedImports"
-              ></pre>
+            <div id="editor-pane" class="playground-pane">
+              <div class="expand-out" data-target="playground.editorPane">
+                <pre
+                  id="editor-pane-static-pre"
+                  data-target="playground.injectedImports"
+                ></pre>
+                <div
+                  id="editor-pane-dynamic"
+                  data-target="playground.editable"
+                ></div>
+              </div>
+            </div>
+            <div id="preview-pane" class="playground-pane">
               <div
-                id="editor-pane-dynamic"
-                data-target="playground.editable"
+                class="expand-out"
+                data-target="playground.editorPreview"
               ></div>
             </div>
-            <div id="preview-pane" data-target="playground.editorPreview"></div>
           </div>
         </div>
       </div>

@@ -16,6 +16,14 @@ body {
   cursor: pointer;
 }
 
+.expand-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 #app {
   border-top: 4px solid rgb(64, 169, 243);
 }
@@ -98,13 +106,21 @@ body {
   flex-shrink: 1;
 }
 
-#editor-pane {
-  overflow: auto;
-  border-right: 1px solid silver;
-  cursor: text;
+.playground-pane {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.playground-pane > div {
+  overflow: auto;
+}
+
+#editor-pane {
+  border-right: 1px solid silver;
+  cursor: text;
 }
 
 #editor-pane-static-pre {
